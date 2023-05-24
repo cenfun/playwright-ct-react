@@ -1,3 +1,4 @@
+import React from 'react';
 import { test as ctBase, expect } from '@playwright/experimental-ct-react';
 import { addCoverageReport } from 'monocart-reporter';
 
@@ -34,9 +35,13 @@ const test = ctBase.extend({
 });
 
 
-test.use({ viewport: { width: 500, height: 500 } });
+test.use({
+    viewport: {
+        width: 500, height: 500
+    }
+});
 
 test('should work', async ({ mount }) => {
-  const component = await mount(<App />);
-  await expect(component).toContainText('Learn React');
+    const component = await mount(<App />);
+    await expect(component).toContainText('Learn React');
 });

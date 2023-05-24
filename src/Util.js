@@ -1,10 +1,9 @@
 
+export const foo = () => {
 
-export const foo = ()=> {
-
-}
+};
 
 
-export const bar = ()=> {
+export const bar = () => {
 
-}
+};
