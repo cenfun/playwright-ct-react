@@ -32,11 +32,12 @@ export default defineConfig({
         ['monocart-reporter', {
             name: 'Playwright CT React',
             outputFile: 'docs/index.html',
+
+            logging: 'debug',
             coverage: {
                 // toIstanbul:true,
-                excludeDistFile: false,
-                sourceFilter: (sourceName) => {
-                    return sourceName.search(/src\//) !== -1;
+                sourceFilter: (sourcePath) => {
+                    return sourcePath.search(/src\//) !== -1;
                 },
                 entryFilter: (entry) => {
                     // return entry.type !== 'css';
